@@ -29,7 +29,7 @@ int main() {
     string text1 = "A man, a plan, a canal: Panama";
     cout << isPalindrome(text1) << endl;
 
-    string text2 = "nigga been counting me out";
+    string text2 = "regular sentence here";
     cout << isPalindrome(text2) << endl;
 
     string text3 = "";
