@@ -24,15 +24,10 @@ public:
             // process the current word if it is at least as long as the target string
             if (word.size() >= target.size())
             {
-                // obtain the frequency of each character using another multiset
-                multiset<char> freq;
-                for (char& c : word)
-                    freq.insert(c);
-                
-                // for every character c, check if the occurence of c in the current word is greater or equal to its occurence in the target string
+                // for every character c, check if the count of c in the current word is greater or equal to its count in the target string
                 bool matching = true;
                 for (char c : targetFreq)
-                    if (freq.count(c) < targetFreq.count(c))
+                    if (count(begin(word), end(word), c) < targetFreq.count(c))
                     {
                         matching = false;
                         break;
